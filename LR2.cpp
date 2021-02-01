@@ -44,27 +44,28 @@ int main()
     }
 
     
-    double y1; //№4
-    cout << "Введите число" << endl;
-    float x1;
-    int    n = 0;
-    float q = 1;
-    double t = 0;
-    cin >> x1;
-    t = 0;
-    y1 = cos(x1);
+cout << "Введите X" << endl;//4
+float x1;
+int    n = 0;
+float q = 0.01;
+double t = 0;
+cin >> x1;
+t = 1;
+y1 = cos(x1);
 
-    for (int i = -2; i >= -6; --i)
+for (int i = -2; i >= -6; --i)
+{
+    n = 0;
+    while (abs(y1-t) > q)
     {
-        while (abs(y1) - abs(t) <= 0.01 * q)
-        {
+        n++;
+        cout << n << " ";
+        t += pow(-1, n) * pow(x1, 2 * n) / fact(n * 2);
 
-            t += pow(-1, n) * pow(x1, 2 * n) / fact(n * 2);
-            n++;
-            cout << t << " " << y1 << endl;
-        }
-        cout << "Необходимо итераций " << n << endl;
-        q *= 0;
     }
-    return 0;
+    cout << "Необходимо итераций для 10^"<< q <<": "<< n << endl;
+    q *= 0.1;
+    t = 0;
+}
+return 0;
 }
