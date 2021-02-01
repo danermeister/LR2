@@ -2,6 +2,7 @@
 #include <cmath>
 
 using namespace std;
+
 long long  fact(int n) {
     long long f = 1;
     for (int i = 1; i <= n; ++i) {
@@ -17,7 +18,7 @@ int main()
     cout << "ASCII" << endl;
     for (int i = 0; i <= 255; ++i) {
 
-        cout << a << endl;
+        cout<<"Code: "<< i <<" Char: "<< a << endl;
         a++;
     }
 
@@ -40,11 +41,12 @@ int main()
     case 1:cout << x << endl; break;
     case 2:cout << pow(x, 2) << endl; break;
     case 3:cout << 1 << endl; break;
-    case 4:cout <<static_cast<int>( x * (-1)) << endl; break;
+    case 4:cout << static_cast<int>(x * (-1)) << endl; break;
     }
 
-    
-cout << "Введите X" << endl;//4
+
+double y1; //№4
+cout << "Введите X" << endl;
 float x1;
 int    n = 0;
 float q = 0.01;
