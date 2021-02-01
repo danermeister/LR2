@@ -61,7 +61,6 @@ for (int i = -2; i >= -6; --i)
     while (abs(y1-t) > q)
     {
         n++;
-        cout << n << " ";
         t += pow(-1, n) * pow(x1, 2 * n) / fact(n * 2);
 
     }
